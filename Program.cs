@@ -101,15 +101,18 @@ namespace StudentInfo
                     }
 
                 }
+                Console.WriteLine("Please enter a valid input.  Goodbye.");
+
                 Console.WriteLine("Would you like to know about another student? y/n:");
                 string beginAgain = Console.ReadLine();
                 if (beginAgain == "y")
                 {
                     keepgoing = true;
                 }
-
-                else
-                    Console.WriteLine("Please enter a valid input.  Goodbye.");
+                if (beginAgain != "y")
+                {
+                    keepgoing = false;
+                }
             }
         }
     }
